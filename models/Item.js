@@ -5,12 +5,12 @@ const Item = new Schema ({
     type: String,
     unique: true,
     required: true
-  }
+  },
   isDone: {
     type: Boolean,
     required: true
   }
-})
+}, { timestamps: true })
 
 // const ItemModel = model('Item', Item)
 
