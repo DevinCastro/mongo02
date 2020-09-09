@@ -9,6 +9,11 @@ const Item = new Schema ({
   isDone: {
     type: Boolean,
     required: true
+  },
+  user: {
+    // the mongoose data type for ids
+    type: Schema.Types.ObjectId,
+    ref: 'User'
   }
 }, { timestamps: true })
 
