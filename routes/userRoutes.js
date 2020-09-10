@@ -13,7 +13,7 @@ router.post('/users/register', (req,res) => {
 
 // login route
 router.post('/users/login', (req,res) => {
-  const { usernamem, password } = req.body
+  const { username, password } = req.body
   User.authenticate()(username, password, (err, user) => {
     if (err) {console.log(err)}
     res.json(user ? jwt.sign({ id: user._id }, process.env.SECRET) : null)
